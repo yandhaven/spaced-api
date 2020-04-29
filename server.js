@@ -12,6 +12,6 @@ app.get('/', (request, response)=>{
 })
 
 https.createServer({
-    key: fs.readFileSync('./key.pem'),
-    cert: fs.readFileSync('./cert.pem'),
+    key: fs.readFileSync('./server.key'),
+    cert: fs.readFileSync('./server.crt'),
     passphrase: 'pmod11258'}, app).listen(port);
